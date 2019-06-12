@@ -14,5 +14,7 @@ class Servico extends Model
     
     protected $table = 'servicos';
 
+
     
+
 }
