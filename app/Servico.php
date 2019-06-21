@@ -15,6 +15,7 @@ class Servico extends Model
     protected $table = 'servicos';
 
 
-    
+    protected $teste;
 
 }
+
