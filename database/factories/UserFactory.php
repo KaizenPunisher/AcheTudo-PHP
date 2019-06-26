@@ -2,6 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 use App\User;
+use App\Empresa;
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 
@@ -29,7 +30,7 @@ $factory->define(User::class, function (Faker $faker) {
 $factory->define(Empresa::class, function (Faker $faker) {
     return [
         'nomeFantasia'         => $faker->company,
-        'razaoSocial'          => $faker->company_suffix,
+        'razaoSocial'          => $faker->company,
         'cnpj'                 => $faker->cnpj,
         'horarioDeAtendimento' => $faker->time,
         'descricao'            => $faker->text,
