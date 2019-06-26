@@ -34,5 +34,6 @@ $factory->define(Empresa::class, function (Faker $faker) {
         'cnpj'                 => $faker->cnpj,
         'horarioDeAtendimento' => $faker->time,
         'descricao'            => $faker->text,
+        'servico_id'           => '1',
     ];
 });
