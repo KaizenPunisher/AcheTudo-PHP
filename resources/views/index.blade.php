@@ -11,7 +11,9 @@
 
 </head>
 <body>
-@extends('src.topo')
+@include('src.topo')
+
+@yield('conteudo')
 
 
 </body>
