@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::group(['prefix' => 'empresas'], function(){
-    Route::get('/', 'EmpresaController@index');
+Route::group(['prefix' => '/'], function(){
+    Route::get('/', 'ServicoController@index');
 });

@@ -3,6 +3,7 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 use App\User;
 use App\Empresa;
+use App\Servico;
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 
@@ -37,3 +38,4 @@ $factory->define(Empresa::class, function (Faker $faker) {
         'servico_id'           => '1',
     ];
 });
+
