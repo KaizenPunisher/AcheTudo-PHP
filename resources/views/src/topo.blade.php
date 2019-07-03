@@ -17,16 +17,25 @@
             Serviços
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                @foreach($servicos as $servicos)
-                    <a class="dropdown-item" href="/listarEmpresas">{{ $servicos->nome }}</a>
-                    <div class="dropdown-divider"></div>
-                @endforeach
+                <form action="/listarEmpresas" method="get">
+                    @foreach($servicos as $servicos)
+                        <button class="dropdown-item" type="submit" onclick="getServicoId({{ $loop->iteration }})">{{ $servicos->nome }}</button>
+                        <div class="dropdown-divider"></div>
+                    @endforeach
+                    <script>
+                        function getServicoId(a){
+                            document.getElementById("servicoId").value = a;
+                        }
+                    </script>
+                    <input type="hidden" value="" id="servicoId" name="servicoId">
+                </form>
             </div>
         </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Procurar" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
+            <input class="form-control mr-sm-2" type="search" placeholder="Procurar" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
         </form>
     </div>
+    
 </nav>

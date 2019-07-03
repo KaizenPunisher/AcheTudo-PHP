@@ -1,5 +1,9 @@
 @extends('index')
 @section('conteudo')
+
+<div class='container'>
+    {{ $listarId }}
+</div>
 <table class="table">
   <thead>
     <tr>
@@ -15,7 +19,7 @@
   <tbody>
     @foreach($empresas as $empresas)
     <tr>
-      <th scope="row">1</th>
+      <th scope="row">{{ $empresas->id }}</th>
       <td>{{ $empresas->nomeFantasia }}</td>
       <td>{{ $empresas->razaoSocial }}</td>
       <td>{{ $empresas->cnpj }}</td>

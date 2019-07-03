@@ -38,4 +38,3 @@ $factory->define(Empresa::class, function (Faker $faker) {
         'servico_id'           => '1',
     ];
 });
-
