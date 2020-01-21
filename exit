@@ -1,0 +1,18 @@
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mindex 59e8f45..caa15c5 100644[m
+[1m--- a/.gitignore[m
+[1m+++ b/.gitignore[m
+[36m@@ -9,3 +9,5 @@[m [mHomestead.json[m
+ Homestead.yaml[m
+ npm-debug.log[m
+ yarn-error.log[m
+[32m+[m
+[32m+[m[32mkaizen.txt[m
+[1mdiff --git a/changelog.txt.txt b/changelog.txt[m
+[1msimilarity index 100%[m
+[1mrename from changelog.txt.txt[m
+[1mrename to changelog.txt[m
+[1mdiff --git a/readme.txt.txt b/readme.txt[m
+[1msimilarity index 100%[m
+[1mrename from readme.txt.txt[m
+[1mrename to readme.txt[m
