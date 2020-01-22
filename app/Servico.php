@@ -10,12 +10,10 @@ class Servico extends Model
     protected $fillable = [
         'id',
         'nome',
+        'vip',
     ];
     
     protected $table = 'servicos';
-
-
-    protected $teste;
 
 }
 

@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['prefix' => '/'], function(){
+    Route::get('/', 'ServicoController@listarServicos');
+    Route::get('/listarEmpresas', 'EmpresaController@listarEmpresas');
 });

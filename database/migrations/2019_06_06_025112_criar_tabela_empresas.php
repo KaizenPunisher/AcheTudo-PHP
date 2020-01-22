@@ -19,7 +19,7 @@ class CriarTabelaEmpresas extends Migration
             $table->string('razaoSocial')->nullable();
             $table->string('cnpj')->nullable();
             $table->string('horarioDeAtendimento')->nullable();
-            $table->string('descricao')->nullable();
+            $table->text('descricao')->nullable();
             $table->integer('servico_id')->unsigned();
             $table->foreign('servico_id')->references('id')->on('servicos')->onDelete('cascade');
             $table->timestamps();
