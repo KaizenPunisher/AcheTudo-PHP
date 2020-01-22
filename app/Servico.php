@@ -13,7 +13,6 @@ class Servico extends Model
         'vip',
     ];
     
-    
     protected $table = 'servicos';
 
 }
