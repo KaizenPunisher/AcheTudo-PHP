@@ -10,10 +10,12 @@ class Servico extends Model
     protected $fillable = [
         'id',
         'nome',
-        'vip',
     ];
     
     protected $table = 'servicos';
 
+    public function autonomo(){
+        return $this->hasMany(Empresa::class, 'servico_id');
+    }
 }
 

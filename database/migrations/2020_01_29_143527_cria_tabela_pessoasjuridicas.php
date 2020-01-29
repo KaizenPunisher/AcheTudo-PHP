@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriarTabelaAutonomos extends Migration
+class CriaTabelaPessoasjuridicas extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,18 @@ class CriarTabelaAutonomos extends Migration
      */
     public function up()
     {
-        Schema::create('autonomos', function (Blueprint $table) {
+        Schema::create('pessoasjuridicas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nome')->nullable();
             $table->string('nomeFantasia')->nullable();
-            $table->string('cpf')->nullable();
+            $table->string('razaoSocial')->nullable();
+            $table->string('cnpj')->nullable();
             $table->string('horarioDeAtendimento')->nullable();
-            $table->string('descricao')->nullable();
+            $table->text('descricao')->nullable();
             $table->integer('servico_id')->unsigned();
             $table->foreign('servico_id')->references('id')->on('servicos')->onDelete('cascade');
             $table->timestamps();
         });
+        //
     }
 
     /**
@@ -33,6 +34,7 @@ class CriarTabelaAutonomos extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('autonomos');
+        Schema::dropIfExists('pessoasjuridicas');
+        //
     }
 }

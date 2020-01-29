@@ -16,7 +16,6 @@ class CriaTabelaServicos extends Migration
         Schema::create('servicos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nome')->nullable();
-            $table->boolean('vip');
             $table->timestamps();
         });
     }

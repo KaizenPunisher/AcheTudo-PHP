@@ -4,20 +4,20 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Autonomo extends Model
+class PessoaJuridica extends Model
 {
     //
     protected $fillable = [
         'id',
-        'nome',
         'nomeFantasia',
-        'cpf',
+        'razaoSocial',
+        'cnpj',
         'horarioDeAtendimento',
         'descricao',
         'servico_id',
     ];
 
-    protected $table = 'autonomos';
+    protected $table = 'pessoasjuridicas';
 
     public function servico(){
         return $this->belongsTo(Empresa::class, 'servico_id');
