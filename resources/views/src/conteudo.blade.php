@@ -2,7 +2,7 @@
 @section('conteudo')
 
 <div class='container'>
-    {{ $listarId }}
+    {{ $servicoId }}
 </div>
 <table class="table">
   <thead>
@@ -17,17 +17,18 @@
     </tr>
   </thead>
   <tbody>
-    @foreach($empresas as $empresas)
+    @foreach($empresa as $empresa)
     <tr>
-      <th scope="row">{{ $empresas->id }}</th>
-      <td>{{ $empresas->nomeFantasia }}</td>
-      <td>{{ $empresas->razaoSocial }}</td>
-      <td>{{ $empresas->cnpj }}</td>
-      <td>{{ $empresas->horarioDeAtendimento }}</td>
-      <td>{{ $empresas->descricao }}</td>
-      <td>{{ $empresas->servico_id }}</td>
+      <th scope="row">{{ $empresa->id }}</th>
+      <td>{{ $empresa->nome_fantasia }}</td>
+      <td>{{ $empresa->razao_social }}</td>
+      <td>{{ $empresa->cnpj }}</td>
+      <td>{{ $empresa->horario_de_atendimento }}</td>
+      <td>{{ $empresa->descricao }}</td>
+      <td>{{ $empresa->servico_id }}</td>
     </tr>
     @endforeach
   </tbody>
 </table>
+
 @endsection

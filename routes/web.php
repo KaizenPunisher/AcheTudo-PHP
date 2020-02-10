@@ -13,5 +13,5 @@
 
 Route::group(['prefix' => '/'], function(){
     Route::get('/', 'ServicoController@listarServicos');
-    Route::get('/listarEmpresas', 'EmpresaController@listarEmpresas');
+    Route::post('/listarEmpresas', 'EmpresaController@listarEmpresas');
 });

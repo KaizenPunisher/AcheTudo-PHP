@@ -15,10 +15,13 @@ class CriarTabelaEmpresas extends Migration
     {
         Schema::create('empresas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nomeFantasia')->nullable();
-            $table->string('razaoSocial')->nullable();
+            $table->string('razao_social')->nullable();
+            $table->string('nome_fantasia')->nullable();
+            $table->string('nome')->nullable();
             $table->string('cnpj')->nullable();
-            $table->string('horarioDeAtendimento')->nullable();
+            $table->string('cpf')->nullable();
+            $table->boolean('orgao_publico')->nullable();
+            $table->string('horario_de_atendimento')->nullable();
             $table->text('descricao')->nullable();
             $table->integer('servico_id')->unsigned();
             $table->foreign('servico_id')->references('id')->on('servicos')->onDelete('cascade');

@@ -9,10 +9,13 @@ class Empresa extends Model
     //
     protected $fillable = [
         'id',
-        'nomeFantasia',
-        'razaoSocial',
+        'razao_social',
+        'nome_fantasia',
+        'nome',
         'cnpj',
-        'horarioDeAtendimento',
+        'cpf',
+        'orgao_publico',
+        'horario_de_atendimento',
         'descricao',
         'servico_id',
     ];

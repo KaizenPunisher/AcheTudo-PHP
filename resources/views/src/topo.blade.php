@@ -17,9 +17,10 @@
             Serviços
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <form action="/listarEmpresas" method="get">
-                    @foreach($servicos as $servicos)
-                        <button class="dropdown-item" type="submit" onclick="getServicoId({{ $loop->iteration }})">{{ $servicos->nome }}</button>
+                <form action="/listarEmpresas" method="post">
+                    {{ csrf_field() }}
+                    @foreach($servico as $servico)
+                        <button class="dropdown-item" type="submit" onclick="getServicoId({{ $loop->iteration }})">{{ $servico->nome }}</button>
                         <div class="dropdown-divider"></div>
                     @endforeach
                     <script>
@@ -37,5 +38,4 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
         </form>
     </div>
-    
 </nav>

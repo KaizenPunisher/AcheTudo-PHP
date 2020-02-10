@@ -9,10 +9,10 @@ class ServicoController extends Controller
 {
     public function listarServicos(){
          
-        $listarServicos = Servico::all();
+        $servicos = Servico::all();
         
         return view('index', [
-            'servicos' => $listarServicos
+            'servico' => $servicos
         ]);
     }
     //

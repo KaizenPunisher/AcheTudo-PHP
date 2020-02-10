@@ -10,21 +10,26 @@ use App\Http\Requests;
 
 class EmpresaController extends Controller
 {
-   
+
+
+    public function __construct(){
+        
+    }
+
     public function listarEmpresas(Request $request){
          
-        $servicoId      = $request->input('servicoId');
+        $servicoId        = $request->input('servicoId');
         //$listarEmpresas = DB::table('empresas')->where($servicoId);
         //$listarEmpresas = DB::select('SELECT * FROM  empresas where servico_id = $servicoId');
-        $listarEmpresas = DB::table('empresas')->where('servico_id', $servicoId)->get();
-        $listarServicos = Servico::all();
+        $empresas         = DB::table('empresas')->where('servico_id', $servicoId)->get();
+        $servicos         = Servico::all();
+        
         
         return view('src.conteudo', [
-            'empresas' => $listarEmpresas,
-            'servicos' => $listarServicos,
-            'listarId' => $servicoId,
+            'empresa'        => $empresas,
+            'servico'        => $servicos,
+            'servicoId'      => $servicoId,
         ]);
-      
     }
     //
 }
