@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use DB;
 use App\Empresa;
 use App\Servico;
 use Illuminate\Http\Request;
-use App\Http\Requests;
+use Illuminate\Support\Facades\DB as FacadesDB;
 
 class EmpresaController extends Controller
 {
@@ -24,7 +23,7 @@ class EmpresaController extends Controller
 
         //$listarEmpresas   = DB::table('empresas')->where($servicoId);
         //$listarEmpresas   = DB::select('SELECT * FROM  empresas where servico_id = $servicoId');
-        $empresas         = DB::table('empresas')->where('servico_id', $servicoId)->get();
+        $empresas         = FacadesDB::table('empresas')->where('servico_id', $servicoId)->get();
         
         //var_dump($this->empresa->find($servicoId));
 
