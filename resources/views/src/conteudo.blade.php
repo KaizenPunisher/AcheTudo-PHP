@@ -14,6 +14,7 @@
       <th scope="col">Hr Atendimento</th>
       <th scope="col">Descrição</th>
       <th scope="col">Serviço</th>
+      <th scope="col">Telefone</th>
     </tr>
   </thead>
   <tbody>
@@ -26,6 +27,9 @@
       <td>{{ $empresa->horario_de_atendimento }}</td>
       <td>{{ $empresa->descricao }}</td>
       <td>{{ $empresa->servico_id }}</td>
+      @foreach($telefone as $telefone)
+        <td>{{ $telefone->numero }}</td>
+      @endforeach
     </tr>
     @endforeach
   </tbody>
